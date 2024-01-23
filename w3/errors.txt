@@ -1,0 +1,163 @@
+In file included from w3_p2_prof.cpp:12:
+Collection.h:96:9: error: ‘Book’ does not name a type
+   96 |         Book Collection<Book, 10>::m_smallestItem = Book("", 1, 1000);
+      |         ^~~~
+Collection.h:98:9: error: ‘Book’ does not name a type
+   98 |         Book Collection<Book, 10>::m_largestItem = Book("", 1000, 1);
+      |         ^~~~
+Collection.h:101:9: error: ‘Book’ does not name a type
+  101 |         Book Collection<Book, 72>::m_smallestItem = Book("", 1, 1000);
+      |         ^~~~
+Collection.h:103:9: error: ‘Book’ does not name a type
+  103 |         Book Collection<Book, 72>::m_largestItem = Book("", 1000, 1);
+      |         ^~~~
+Collection.h:106:34: error: ‘Book’ was not declared in this scope
+  106 |         std::ostream& Collection<Book, 10>::print(std::ostream& os) {
+      |                                  ^~~~
+Collection.h:106:42: error: template argument 1 is invalid
+  106 |         std::ostream& Collection<Book, 10>::print(std::ostream& os) {
+      |                                          ^
+Collection.h:106:67: error: ‘print’ is not a template function
+  106 |         std::ostream& Collection<Book, 10>::print(std::ostream& os) {
+      |                                                                   ^
+Collection.h:115:34: error: ‘Book’ was not declared in this scope
+  115 |         std::ostream& Collection<Book, 72>::print(std::ostream& os) {
+      |                                  ^~~~
+Collection.h:115:42: error: template argument 1 is invalid
+  115 |         std::ostream& Collection<Book, 72>::print(std::ostream& os) {
+      |                                          ^
+Collection.h:115:67: error: ‘print’ is not a template function
+  115 |         std::ostream& Collection<Book, 72>::print(std::ostream& os) {
+      |                                                                   ^
+w3_p2_prof.cpp: In function ‘int main(int, char**)’:
+w3_p2_prof.cpp:33:11: error: ‘Book’ is not a member of ‘sdds’
+   33 |     sdds::Book books[]{
+      |           ^~~~
+w3_p2_prof.cpp:47:9: error: ‘books’ was not declared in this scope
+   47 |         books[i].print(std::cout) << "|" << std::endl;;
+      |         ^~~~~
+w3_p2_prof.cpp:50:18: error: ‘books’ was not declared in this scope
+   50 |     std::cout << books[numBooks - 1] << "|" << std::endl;
+      |                  ^~~~~
+w3_p2_prof.cpp:82:32: error: ‘Book’ is not a member of ‘sdds’
+   82 |         sdds::Collection<sdds::Book, 10> bcol;
+      |                                ^~~~
+w3_p2_prof.cpp:82:40: error: template argument 1 is invalid
+   82 |         sdds::Collection<sdds::Book, 10> bcol;
+      |                                        ^
+w3_p2_prof.cpp:84:14: error: request for member ‘getSmallestItem’ in ‘bcol’, which is of non-class type ‘int’
+   84 |         bcol.getSmallestItem().print(std::cout) << " |" << std::endl;
+      |              ^~~~~~~~~~~~~~~
+w3_p2_prof.cpp:86:14: error: request for member ‘getLargestItem’ in ‘bcol’, which is of non-class type ‘int’
+   86 |         bcol.getLargestItem().print(std::cout) << " |" << std::endl;
+      |              ^~~~~~~~~~~~~~
+w3_p2_prof.cpp:87:48: error: request for member ‘size’ in ‘bcol’, which is of non-class type ‘int’
+   87 |         std::cout << "size/capacity: " << bcol.size() << "/" << bcol.capacity() << std::endl;
+      |                                                ^~~~
+w3_p2_prof.cpp:87:70: error: request for member ‘capacity’ in ‘bcol’, which is of non-class type ‘int’
+   87 |         std::cout << "size/capacity: " << bcol.size() << "/" << bcol.capacity() << std::endl;
+      |                                                                      ^~~~~~~~
+w3_p2_prof.cpp:96:14: error: request for member ‘getSmallestItem’ in ‘bcol’, which is of non-class type ‘int’
+   96 |         bcol.getSmallestItem().print(std::cout) << std::endl;
+      |              ^~~~~~~~~~~~~~~
+w3_p2_prof.cpp:98:14: error: request for member ‘getLargestItem’ in ‘bcol’, which is of non-class type ‘int’
+   98 |         bcol.getLargestItem().print(std::cout) << std::endl;
+      |              ^~~~~~~~~~~~~~
+w3_p2_prof.cpp:99:48: error: request for member ‘size’ in ‘bcol’, which is of non-class type ‘int’
+   99 |         std::cout << "size/capacity: " << bcol.size() << "/" << bcol.capacity() << std::endl;
+      |                                                ^~~~
+w3_p2_prof.cpp:99:70: error: request for member ‘capacity’ in ‘bcol’, which is of non-class type ‘int’
+   99 |         std::cout << "size/capacity: " << bcol.size() << "/" << bcol.capacity() << std::endl;
+      |                                                                      ^~~~~~~~
+w3_p2_prof.cpp:102:14: error: request for member ‘print’ in ‘bcol’, which is of non-class type ‘int’
+  102 |         bcol.print(std::cout);
+      |              ^~~~~
+w3_p2_prof.cpp:136:39: error: ‘Book’ is not a member of ‘sdds’
+  136 |         sdds::OrderedCollection<sdds::Book> obcol;
+      |                                       ^~~~
+w3_p2_prof.cpp:136:43: error: template argument 1 is invalid
+  136 |         sdds::OrderedCollection<sdds::Book> obcol;
+      |                                           ^
+w3_p2_prof.cpp:138:15: error: request for member ‘getSmallestItem’ in ‘obcol’, which is of non-class type ‘int’
+  138 |         obcol.getSmallestItem().print(std::cout) << std::endl;
+      |               ^~~~~~~~~~~~~~~
+w3_p2_prof.cpp:140:15: error: request for member ‘getLargestItem’ in ‘obcol’, which is of non-class type ‘int’
+  140 |         obcol.getLargestItem().print(std::cout) << std::endl;
+      |               ^~~~~~~~~~~~~~
+w3_p2_prof.cpp:141:49: error: request for member ‘size’ in ‘obcol’, which is of non-class type ‘int’
+  141 |         std::cout << "size/capacity: " << obcol.size() << "/" << obcol.capacity() << std::endl;
+      |                                                 ^~~~
+w3_p2_prof.cpp:141:72: error: request for member ‘capacity’ in ‘obcol’, which is of non-class type ‘int’
+  141 |         std::cout << "size/capacity: " << obcol.size() << "/" << obcol.capacity() << std::endl;
+      |                                                                        ^~~~~~~~
+w3_p2_prof.cpp:148:15: error: request for member ‘getSmallestItem’ in ‘obcol’, which is of non-class type ‘int’
+  148 |         obcol.getSmallestItem().print(std::cout) << std::endl;
+      |               ^~~~~~~~~~~~~~~
+w3_p2_prof.cpp:150:15: error: request for member ‘getLargestItem’ in ‘obcol’, which is of non-class type ‘int’
+  150 |         obcol.getLargestItem().print(std::cout) << std::endl;
+      |               ^~~~~~~~~~~~~~
+w3_p2_prof.cpp:151:49: error: request for member ‘size’ in ‘obcol’, which is of non-class type ‘int’
+  151 |         std::cout << "size/capacity: " << obcol.size() << "/" << obcol.capacity() << std::endl;
+      |                                                 ^~~~
+w3_p2_prof.cpp:151:72: error: request for member ‘capacity’ in ‘obcol’, which is of non-class type ‘int’
+  151 |         std::cout << "size/capacity: " << obcol.size() << "/" << obcol.capacity() << std::endl;
+      |                                                                        ^~~~~~~~
+w3_p2_prof.cpp:154:15: error: request for member ‘print’ in ‘obcol’, which is of non-class type ‘int’
+  154 |         obcol.print(std::cout);
+      |               ^~~~~
+Book.cpp:4:9: error: ‘Book’ does not name a type
+    4 |         Book::Book(const string& title, unsigned nChapters, unsigned nPages) :
+      |         ^~~~
+Book.cpp:6:9: error: ‘Book’ does not name a type
+    6 |         Book::Book() {}
+      |         ^~~~
+Book.cpp:8:9: error: ‘Book’ does not name a type
+    8 |         Book::operator bool() const
+      |         ^~~~
+Book.cpp:13:9: error: ‘Book’ does not name a type
+   13 |         Book& Book::operator=(const Book& other)
+      |         ^~~~
+Book.cpp:23:14: error: ‘Book’ has not been declared
+   23 |         bool Book::operator<(const Book& other) const
+      |              ^~~~
+Book.cpp:23:36: error: ‘Book’ does not name a type
+   23 |         bool Book::operator<(const Book& other) const
+      |                                    ^~~~
+Book.cpp:23:49: error: non-member function ‘bool sdds::operator<(const int&)’ cannot have cv-qualifier
+   23 |         bool Book::operator<(const Book& other) const
+      |                                                 ^~~~~
+Book.cpp:23:14: error: ‘bool sdds::operator<(const int&)’ must have an argument of class or enumerated type
+   23 |         bool Book::operator<(const Book& other) const
+      |              ^~~~
+Book.cpp:28:14: error: ‘Book’ has not been declared
+   28 |         bool Book::operator>(const Book& other) const
+      |              ^~~~
+Book.cpp:28:36: error: ‘Book’ does not name a type
+   28 |         bool Book::operator>(const Book& other) const
+      |                                    ^~~~
+Book.cpp:28:49: error: non-member function ‘bool sdds::operator>(const int&)’ cannot have cv-qualifier
+   28 |         bool Book::operator>(const Book& other) const
+      |                                                 ^~~~~
+Book.cpp:28:14: error: ‘bool sdds::operator>(const int&)’ must have an argument of class or enumerated type
+   28 |         bool Book::operator>(const Book& other) const
+      |              ^~~~
+Book.cpp:33:16: error: ‘Book’ has not been declared
+   33 |         double Book::pgsPerChptrs() const
+      |                ^~~~
+Book.cpp:33:37: error: non-member function ‘double sdds::pgsPerChptrs()’ cannot have cv-qualifier
+   33 |         double Book::pgsPerChptrs() const
+      |                                     ^~~~~
+Book.cpp: In function ‘double sdds::pgsPerChptrs()’:
+Book.cpp:35:32: error: ‘m_numPages’ was not declared in this scope
+   35 |                 return (double)m_numPages / m_numChapters;
+      |                                ^~~~~~~~~~
+Book.cpp:35:45: error: ‘m_numChapters’ was not declared in this scope
+   35 |                 return (double)m_numPages / m_numChapters;
+      |                                             ^~~~~~~~~~~~~
+Book.cpp: At global scope:
+Book.cpp:38:9: error: ‘ostream’ does not name a type
+   38 |         ostream& Book::print(ostream& os) const
+      |         ^~~~~~~
+Book.cpp:55:9: error: ‘ostream’ does not name a type
+   55 |         ostream& operator<<(ostream& os, const Book& bk)
+      |         ^~~~~~~

@@ -1,0 +1,93 @@
+Script started on Sun 17 Sep 2023 10:01:01 PM EDT
+==232950== Memcheck, a memory error detector
+==232950== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==232950== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==232950== Command: ws rides1.txt rides2.txt deleted.txt rides4.txt
+==232950== 
+[38;5;9mBegin Testing the Program!
+--------------------------[0m
+
+Command Line:
+--------------------------
+  1: ws
+  2: rides1.txt
+  3: rides2.txt
+  4: deleted.txt
+  5: rides4.txt
+--------------------------
+
+--------------------
+    Day 1
+--------------------
+Name          |Ride Description         |Price w/ Tax|Price with Discount
+1 . Jack      |North York               |10.16       |
+2 . Julian    |Mississauga              |9.03        |         7.88
+3 . Susan     |East York                |8.58        |
+4 . John      |Scarborough              |7.90        |         6.75
+5 . Nika      |Thornhill                |6.77        |
+--------------------
+    Day 2
+--------------------
+Name          |Ride Description         |Price w/ Tax|Price with Discount
+6 . Emily     |Danforth                 |12.53       |        11.33
+7 . Ali       |Broadview                |14.81       |
+8 . Marry     |Pape                     |9.79        |         8.59
+9 . Mike      |Donalds                  |6.26        |
+10. Kate      |Woodbine                 |6.83        |         5.63
+11. No Ride Request
+--------------------
+    Day 3
+--------------------
+Cannot open file [deleted.txt]. Ignoring it!
+--------------------
+    Day 4
+--------------------
+Name          |Ride Description         |Price w/ Tax|Price with Discount
+12. George    |Customer requested to make a s=
+×£pý1@y a birthday cake for a colleague.|20.51       |        19.31
+==232950== Invalid read of size 8
+==232950==    at 0x4F41336: std::istream::sentry::sentry(std::istream&, bool) (istream.tcc:50)
+==232950==    by 0x4F42B7B: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char> >(std::basic_istream<char, std::char_traits<char> >&, char&) (istream.tcc:936)
+==232950==    by 0x401A55: main (w1_p2.cpp:79)
+==232950==  Address 0x6120726f66206553 is not stack'd, malloc'd or (recently) free'd
+==232950== 
+==232950== 
+==232950== Process terminating with default action of signal 11 (SIGSEGV)
+==232950==  General Protection Fault
+==232950==    at 0x4F41336: std::istream::sentry::sentry(std::istream&, bool) (istream.tcc:50)
+==232950==    by 0x4F42B7B: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char> >(std::basic_istream<char, std::char_traits<char> >&, char&) (istream.tcc:936)
+==232950==    by 0x401A55: main (w1_p2.cpp:79)
+==232950== 
+==232950== HEAP SUMMARY:
+==232950==     in use at exit: 8,760 bytes in 2 blocks
+==232950==   total heap usage: 19 allocs, 17 frees, 100,179 bytes allocated
+==232950== 
+==232950== 568 bytes in 1 blocks are still reachable in loss record 1 of 2
+==232950==    at 0x4C29F73: malloc (vg_replace_malloc.c:309)
+==232950==    by 0x578CC4C: __fopen_internal (in /usr/lib64/libc-2.17.so)
+==232950==    by 0x4EFB97F: std::__basic_file<char>::open(char const*, std::_Ios_Openmode, int) (basic_file.cc:240)
+==232950==    by 0x4F39EEA: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (fstream.tcc:185)
+==232950==    by 0x4F3A80B: open (fstream:660)
+==232950==    by 0x4F3A80B: std::basic_ifstream<char, std::char_traits<char> >::basic_ifstream(char const*, std::_Ios_Openmode) (fstream:533)
+==232950==    by 0x401993: main (w1_p2.cpp:68)
+==232950== 
+==232950== 8,192 bytes in 1 blocks are still reachable in loss record 2 of 2
+==232950==    at 0x4C2AC38: operator new[](unsigned long) (vg_replace_malloc.c:433)
+==232950==    by 0x4F35FD3: _M_allocate_internal_buffer (fstream.tcc:56)
+==232950==    by 0x4F35FD3: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (fstream.tcc:49)
+==232950==    by 0x4F39F02: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (fstream.tcc:188)
+==232950==    by 0x4F3A80B: open (fstream:660)
+==232950==    by 0x4F3A80B: std::basic_ifstream<char, std::char_traits<char> >::basic_ifstream(char const*, std::_Ios_Openmode) (fstream:533)
+==232950==    by 0x401993: main (w1_p2.cpp:68)
+==232950== 
+==232950== LEAK SUMMARY:
+==232950==    definitely lost: 0 bytes in 0 blocks
+==232950==    indirectly lost: 0 bytes in 0 blocks
+==232950==      possibly lost: 0 bytes in 0 blocks
+==232950==    still reachable: 8,760 bytes in 2 blocks
+==232950==         suppressed: 0 bytes in 0 blocks
+==232950== 
+==232950== For lists of detected and suppressed errors, rerun with: -s
+==232950== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+
+Script done on Sun 17 Sep 2023 10:01:02 PM EDT

@@ -1,0 +1,40 @@
+The primary distinction between composition and aggregation lies in the aspect of resource management. In composition, an object is composed of other objects, and there is a strong relationship between them. For example, a cheese shop is composed of cheese because it relies on cheese to function properly. In contrast, aggregation represents a weaker relationship where an object can exist independently. A cheese party can still be considered a party even without cheese, demonstrating an aggregation relationship.
+
+In the context of dynamically allocated arrays for the cheese shop and cheese party:
+
+In the cheese shop, the array of cheeses is declared as Cheese** m_cheeses{}. Notably, the absence of const indicates that the actual values of the cheeses can be modified. When emptying the cheese shop, each cheese instance is individually deleted before the array itself is deallocated.
+void sdds::CheeseShop::emptyShop() {
+    if (*this) {
+        for (size_t i = 0; i < m_numCheeses; i++) {
+            delete m_cheeses[i];
+            m_cheeses[i] = nullptr;
+        }
+    }
+    m_name = "";
+    m_numCheeses = 0u;
+    delete[] m_cheeses;
+    m_cheeses = nullptr;
+}
+In contrast, for the cheese party, the array is declared as const Cheese** m_pCheeses{}. The inclusion of const signifies that the actual values of the cheeses cannot be changed. When emptying the cheese party, only the array itself is deleted, as there is no need to modify the individual cheese instances.
+void sdds::CheeseParty::emptyParty() {
+    for (size_t i = 0; i < m_numCheeses; i++) {
+        m_pCheeses[i] = nullptr;
+    }
+    m_numCheeses = 0;
+    delete[] m_pCheeses;
+    m_pCheeses = nullptr;
+}
+Regarding move and copy constructors:
+
+In the cheese shop, both the array and each cheese within it must be dynamically allocated. For the copy constructor, each cheese is copied individually:
+for (size_t i = 0; i < m_numCheeses; i++) {
+    m_cheeses[i] = new Cheese;
+    *(m_cheeses[i]) = *(copy.m_cheeses[i]);
+}
+In the cheese party, only the array is dynamically allocated, and the copy constructor simply copies the pointers to the cheeses:
+for (size_t i = 0; i < m_numCheeses; i++) {
+    m_pCheeses[i] = copy.m_pCheeses[i];
+}
+When adding cheese to the cheese party, it's necessary to check for duplicates to prevent multiple pointers to the same cheese. This is not an issue in the cheese shop, where each cheese is its own instance.
+
+For removing cheese, both the cheese shop and cheese party can have similar functions. In the cheese shop, the removeCheeseAndShrink function would dynamically allocate a new cheese when copying. In both cases, a function like findEmptyCheese can be used to locate empty cheese slots, and then removeCheeseAndShrink can be employed to remove a cheese at a specific index.

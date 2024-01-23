@@ -1,0 +1,9 @@
+Full Name  : Bewaji Ibrahim
+Student ID#: 128143203
+I acquired new insights into the realm of computer programming. One valuable skill I honed was the utilization of command line arguments within C++ programs. It's akin to furnishing specific instructions to your program as you initiate it via the command line. This newfound knowledge empowered me to dynamically select and manipulate files in my program, depending on the input provided in the command line.
+
+Another pivotal topic covered during the workshop pertained to various types of linkages. I delved into the intricacies of accessing variables that are defined in one module from within a separate module. This proficiency is particularly indispensable when navigating the complexities of programming tasks that necessitate seamless data exchange across disparate program components.
+
+Furthermore, the workshop delved into the concept of declaring local variables with an extended lifespan. These variables persist in memory throughout the program's entire execution, ensuring they remain accessible and do not fall out of scope until the program gracefully concludes its execution.
+
+Lastly, I revisited familiar ground by exploring the dynamic allocation of memory for strings of indeterminate length. This skill proved instrumental in facilitating the smooth operation of my programs when grappling with varying quantities of text data. Collectively, these workshop experiences enriched my programming acumen and deepened my comprehension of fundamental programming principles.

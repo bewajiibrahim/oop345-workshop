@@ -1,0 +1,18 @@
+*****************************************************************************
+                               Reflection
+                             Workshop - #9
+Full Name  : Bewaji ibrahim 
+Student ID#: 128143203
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+*****************************************************************************
+When I added a tiny pause in the loops of computeAvgFactor and computeVarFactor for a single task, things slowed down a lot. For one job, the time jumped from 7 milliseconds to over 100 milliseconds. Surprisingly, changing the pause duration didn't really change this much. But when I had multiple jobs going on at the same time, even a tiny pause made all the jobs take longer, although making the pause longer didn't slow things down as much as I thought.
+
+Switching to binary files made handling data much easier. I didn't have to stress about how things looked—whether reading or writing, it simplified dealing with the size and content of arrays.
+
+Using function binding in coding simplified how I make things happen. For example, when using threads with computeVarFactor, I didn't need to pass around a bunch of things each time. It made creating threads for functions like computeAvgFactor way less complicated.
+
+Having lots of threads helped speed up the process of finding averages. Each thread did its own part of the work, and in the end, everything added up. It's like having many hands to help with a big task—things got done faster and more smoothly.

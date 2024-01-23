@@ -1,0 +1,18 @@
+ Workshop - #8 (reflect)
+Full Name  : Bewaji Ibrahim
+Student ID#: 128143203
+
+1 Taking Care of Memory with Raw Pointers:
+When I use raw pointers, it's important to clean up memory properly. So, if there's an issue while checking the address of a new Profile, I make sure to delete the pointer before telling the computer about the problem.
+
+2 Liking Smart Pointers for Easy Memory Stuff:
+I really like smart pointers because they make handling memory easy. With smart pointers, checking the address and making space for a Profile is done in a neat package called std::shared_ptr<Profile>. If something goes wrong during the address check, the smart pointer cleans up memory automatically.
+
+3 Making Things Simple with Smart Pointers:
+Switching to smart pointers has made my way of doing things simpler. Making, checking, and putting a Profile in the result list becomes straightforward. Smart pointers take care of memory, so I don't have to worry too much about cleaning up.
+
+4 Doing Profile Checks and List Stuff Better:
+To make things better, I like to check a profile without making an extra copy. If everything looks good, I then make space for the profile and put it in the result list. This way, I avoid making unnecessary copies and do things more efficiently.
+
+5 Trying Something New with std::move():
+I tried using std::move(*address) to add a profile to the list in a cool way instead of the usual database.push_back(*address). Surprisingly, both ways seemed the same, making a copied profile in the list.

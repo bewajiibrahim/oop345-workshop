@@ -1,0 +1,85 @@
+w8_p2_prof.cpp:12:6: error: ‘sdds’ has not been declared
+   12 | bool sdds::Profile::Trace = false;
+      |      ^~~~
+w8_p2_prof.cpp: In function ‘int main(int, char**)’:
+w8_p2_prof.cpp:28:17: error: ‘sdds’ has not been declared
+   28 |                 sdds::DataBase<sdds::Profile> allProfiles(argv[1]);
+      |                 ^~~~
+w8_p2_prof.cpp:28:32: error: ‘sdds’ has not been declared
+   28 |                 sdds::DataBase<sdds::Profile> allProfiles(argv[1]);
+      |                                ^~~~
+w8_p2_prof.cpp:28:47: error: ‘allProfiles’ was not declared in this scope
+   28 |                 sdds::DataBase<sdds::Profile> allProfiles(argv[1]);
+      |                                               ^~~~~~~~~~~
+w8_p2_prof.cpp:29:17: error: ‘sdds’ has not been declared
+   29 |                 sdds::DataBase<sdds::Profile> goodProfiles(argv[2]);
+      |                 ^~~~
+w8_p2_prof.cpp:29:32: error: ‘sdds’ has not been declared
+   29 |                 sdds::DataBase<sdds::Profile> goodProfiles(argv[2]);
+      |                                ^~~~
+w8_p2_prof.cpp:29:47: error: ‘goodProfiles’ was not declared in this scope
+   29 |                 sdds::DataBase<sdds::Profile> goodProfiles(argv[2]);
+      |                                               ^~~~~~~~~~~~
+w8_p2_prof.cpp:30:17: error: ‘sdds’ has not been declared
+   30 |                 sdds::DataBase<sdds::Profile> badProfiles(argv[3]);
+      |                 ^~~~
+w8_p2_prof.cpp:30:32: error: ‘sdds’ has not been declared
+   30 |                 sdds::DataBase<sdds::Profile> badProfiles(argv[3]);
+      |                                ^~~~
+w8_p2_prof.cpp:30:47: error: ‘badProfiles’ was not declared in this scope
+   30 |                 sdds::DataBase<sdds::Profile> badProfiles(argv[3]);
+      |                                               ^~~~~~~~~~~
+w8_p2_prof.cpp:47:17: error: ‘sdds’ has not been declared
+   47 |                 sdds::Profile::Trace = true;
+      |                 ^~~~
+w8_p2_prof.cpp:52:25: error: ‘sdds’ has not been declared
+   52 |                         sdds::DataBase<sdds::Profile> res = sdds::excludeRaw(allProfiles, badProfiles);
+      |                         ^~~~
+w8_p2_prof.cpp:52:40: error: ‘sdds’ has not been declared
+   52 |                         sdds::DataBase<sdds::Profile> res = sdds::excludeRaw(allProfiles, badProfiles);
+      |                                        ^~~~
+w8_p2_prof.cpp:52:55: error: ‘res’ was not declared in this scope
+   52 |                         sdds::DataBase<sdds::Profile> res = sdds::excludeRaw(allProfiles, badProfiles);
+      |                                                       ^~~
+w8_p2_prof.cpp:52:61: error: ‘sdds’ has not been declared
+   52 |                         sdds::DataBase<sdds::Profile> res = sdds::excludeRaw(allProfiles, badProfiles);
+      |                                                             ^~~~
+w8_p2_prof.cpp:64:25: error: ‘sdds’ has not been declared
+   64 |                         sdds::DataBase<sdds::Profile> res = sdds::excludeSmart(allProfiles, badProfiles);
+      |                         ^~~~
+w8_p2_prof.cpp:64:40: error: ‘sdds’ has not been declared
+   64 |                         sdds::DataBase<sdds::Profile> res = sdds::excludeSmart(allProfiles, badProfiles);
+      |                                        ^~~~
+w8_p2_prof.cpp:64:55: error: ‘res’ was not declared in this scope
+   64 |                         sdds::DataBase<sdds::Profile> res = sdds::excludeSmart(allProfiles, badProfiles);
+      |                                                       ^~~
+w8_p2_prof.cpp:64:61: error: ‘sdds’ has not been declared
+   64 |                         sdds::DataBase<sdds::Profile> res = sdds::excludeSmart(allProfiles, badProfiles);
+      |                                                             ^~~~
+w8_p2_prof.cpp:71:17: error: ‘sdds’ has not been declared
+   71 |                 sdds::Profile::Trace = false;
+      |                 ^~~~
+w8_p2_prof.cpp:78:25: error: ‘sdds’ has not been declared
+   78 |                         sdds::DataBase<sdds::Profile> res = sdds::excludeRaw(allProfiles, goodProfiles);
+      |                         ^~~~
+w8_p2_prof.cpp:78:40: error: ‘sdds’ has not been declared
+   78 |                         sdds::DataBase<sdds::Profile> res = sdds::excludeRaw(allProfiles, goodProfiles);
+      |                                        ^~~~
+w8_p2_prof.cpp:78:55: error: ‘res’ was not declared in this scope
+   78 |                         sdds::DataBase<sdds::Profile> res = sdds::excludeRaw(allProfiles, goodProfiles);
+      |                                                       ^~~
+w8_p2_prof.cpp:78:61: error: ‘sdds’ has not been declared
+   78 |                         sdds::DataBase<sdds::Profile> res = sdds::excludeRaw(allProfiles, goodProfiles);
+      |                                                             ^~~~
+w8_p2_prof.cpp:86:25: error: ‘sdds’ has not been declared
+   86 |                         sdds::DataBase<sdds::Profile> res = sdds::excludeSmart(allProfiles, goodProfiles);
+      |                         ^~~~
+w8_p2_prof.cpp:86:40: error: ‘sdds’ has not been declared
+   86 |                         sdds::DataBase<sdds::Profile> res = sdds::excludeSmart(allProfiles, goodProfiles);
+      |                                        ^~~~
+w8_p2_prof.cpp:86:55: error: ‘res’ was not declared in this scope
+   86 |                         sdds::DataBase<sdds::Profile> res = sdds::excludeSmart(allProfiles, goodProfiles);
+      |                                                       ^~~
+w8_p2_prof.cpp:86:61: error: ‘sdds’ has not been declared
+   86 |                         sdds::DataBase<sdds::Profile> res = sdds::excludeSmart(allProfiles, goodProfiles);
+      |                                                             ^~~~

@@ -1,0 +1,51 @@
+CustomerOrder.cpp: In constructor ‘sdds::CustomerOrder::CustomerOrder(const std::string&)’:
+CustomerOrder.cpp:29:17: error: ‘m_lstItem’ was not declared in this scope; did you mean ‘m_listItem’?
+   29 |                 m_lstItem = new Item * [temp.size()];
+      |                 ^~~~~~~~~
+      |                 m_listItem
+CustomerOrder.cpp: In member function ‘sdds::CustomerOrder& sdds::CustomerOrder::operator=(sdds::CustomerOrder&&)’:
+CustomerOrder.cpp:46:40: error: ‘m_lstItem’ was not declared in this scope; did you mean ‘m_listItem’?
+   46 |                                 delete m_lstItem[i];
+      |                                        ^~~~~~~~~
+      |                                        m_listItem
+CustomerOrder.cpp:48:34: error: ‘m_lstItem’ was not declared in this scope; did you mean ‘m_listItem’?
+   48 |                         delete[] m_lstItem;
+      |                                  ^~~~~~~~~
+      |                                  m_listItem
+CustomerOrder.cpp:54:40: error: ‘class sdds::CustomerOrder’ has no member named ‘m_lstItem’; did you mean ‘m_listItem’?
+   54 |                         m_lstItem = co.m_lstItem;
+      |                                        ^~~~~~~~~
+      |                                        m_listItem
+CustomerOrder.cpp:55:28: error: ‘class sdds::CustomerOrder’ has no member named ‘m_lstItem’; did you mean ‘m_listItem’?
+   55 |                         co.m_lstItem = nullptr;
+      |                            ^~~~~~~~~
+      |                            m_listItem
+CustomerOrder.cpp: In destructor ‘sdds::CustomerOrder::~CustomerOrder()’:
+CustomerOrder.cpp:65:32: error: ‘m_lstItem’ was not declared in this scope; did you mean ‘m_listItem’?
+   65 |                         delete m_lstItem[i];
+      |                                ^~~~~~~~~
+      |                                m_listItem
+CustomerOrder.cpp:66:26: error: ‘m_lstItem’ was not declared in this scope; did you mean ‘m_listItem’?
+   66 |                 delete[] m_lstItem;
+      |                          ^~~~~~~~~
+      |                          m_listItem
+CustomerOrder.cpp: In member function ‘bool sdds::CustomerOrder::isOrderFilled() const’:
+CustomerOrder.cpp:72:29: error: ‘m_lstItem’ was not declared in this scope; did you mean ‘m_listItem’?
+   72 |                         if (m_lstItem[i]->m_isFilled) {
+      |                             ^~~~~~~~~
+      |                             m_listItem
+CustomerOrder.cpp: In member function ‘bool sdds::CustomerOrder::isItemFilled(const std::string&) const’:
+CustomerOrder.cpp:83:29: error: ‘m_lstItem’ was not declared in this scope; did you mean ‘m_listItem’?
+   83 |                         if (m_lstItem[i]->m_itemName == itemName) {
+      |                             ^~~~~~~~~
+      |                             m_listItem
+CustomerOrder.cpp: In member function ‘void sdds::CustomerOrder::fillItem(sdds::Station&, std::ostream&)’:
+CustomerOrder.cpp:94:29: error: ‘m_lstItem’ was not declared in this scope; did you mean ‘m_listItem’?
+   94 |                         if (m_lstItem[i]->m_itemName == station.getItemName()) {
+      |                             ^~~~~~~~~
+      |                             m_listItem
+CustomerOrder.cpp: In member function ‘void sdds::CustomerOrder::display(std::ostream&) const’:
+CustomerOrder.cpp:114:75: error: ‘m_lstItem’ was not declared in this scope; did you mean ‘m_listItem’?
+  114 |                         os << "[" << std::setfill('0') << std::setw(6) << m_lstItem[i]->m_serialNumber << "] ";
+      |                                                                           ^~~~~~~~~
+      |                                                                           m_listItem

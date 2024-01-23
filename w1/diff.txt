@@ -1,0 +1,14 @@
+In line number 46 of your output:
+The output should be:
+12. George    |Customer requested to make a stop to buy a birthday cake for a colleague.|20.51       |        19.31
+                                             ^
+But your output is: 
+12. George    |Customer requested to make a s=
+                                             ^
+
+Unmatched character details:
+The character in column 46 is supposed to be:
+  [t] ASCII code(116)
+but you printed
+  [=] ASCII code(61)
+

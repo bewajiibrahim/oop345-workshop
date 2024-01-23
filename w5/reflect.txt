@@ -1,0 +1,27 @@
+WORKSHOP 5: REFLECTION
+
+1) Learning outcomes
+
+I've greatly enjoyed working with strings over the past few workshops -- extracting and parsing from files to objects, as well as splicing strings that have already been read in their entirety. In the earlier semesters of this program I was advised more often than not to create file-reading functions from scratch, so I have a great deal of respect for the library functions like stoi(), find(), replace() and more. It's certainly less grueling to work with these pre-defined functions, and they serve as powerful tools to expedite the process of writing code.
+
+The exception handling is still something I need more practice with, although I can see the benefit of handling exceptions according to your own rules. It is more obvious where the problem lies when you can recognize your own statements.
+
+2) Functors and lambda expressions
+
+A lambda expression is a simplification of code that may not be needed across multiple modules, or across multiple instances of class objects or classes. Functors serve well as helpers regardless of the class they serve. For example, the spellChecker module accepts a character string from any object's compatible member (or any accessible variable), and will fix the spelling without requiring any other knowledge of the object it affects.
+
+3) Avoiding an exception in the spellChecker constructor
+
+It might be best to generate a file with the provided name, if the file does not exist. This would allow the program to continue without a dataset for that particular file (for example, if movies.txt is empty, the program will stil function for the books.txt file). Rather than throwing an exception, the program could print a message noting that the file is empty (since it has been created), however, the file would need to be deleted after a certain event, perhaps on program exit.
+
+4) Avoiding duplicate logic across Book and Movie
+
+Perhaps the best way of eliminating duplicate logic from both the Book and Movie modules would to have an overarching class that would serve as a base class to both. Both Book and Movie have a lot in common, especially in this application. Both share three common members titles, descriptions, and years. A base class might look like a Media class that would deal with these three members separately from the derived classes of Book and Movie.
+
+Both share the same constructor with a supplied string -- having a base class that deals with this would be more appropriate. Furthermore, their ostream insertion could be streamlined with a base class ostream insertion operator that would consolidate part of the output when displaying an object.
+
+5) Removing the default constructor
+
+My current design of the program would not allow for removing the default constructor. If one was caretful enough, and the code suited it, there is potential for non-fatal removal of the constructor.
+
+Where my application requires it is in the addition of a new item to a collection. When resizing the collection array, a temporary variable of an unknown type is created. This tempoary array of Books or Movies requires that the constructor can create a default array of each respectively such that the contents of the array to be deleted can be assigned to the new array (which will not require a character string).

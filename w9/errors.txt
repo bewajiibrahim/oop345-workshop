@@ -1,0 +1,7 @@
+w9_p2_prof.cpp: In function ‘int main(int, char**)’:
+w9_p2_prof.cpp:71:17: error: ‘sdds’ has not been declared
+   71 |                 sdds::ProcessData pd_obj(fname_source, noOfThreads); // creates function object
+      |                 ^~~~
+w9_p2_prof.cpp:72:21: error: ‘pd_obj’ was not declared in this scope
+   72 |                 if (pd_obj) {
+      |                     ^~~~~~
